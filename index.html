@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<TITLE>Matrix Videos Online Rental System</TITLE>
+<link rel="stylesheet" href="index.css">
+</HEAD>
+<body>
+    <H1>Matrix Videos Online Rental Form</H1>
+    <div class="container">
+        <FORM NAME=frmInput id="form" METHOD=post ACTION=mailto:rental@matrixcollege.com
+    ENCTYPE=text/plain>
+        <H2 >Please input your name, telephone number including area code, and e-mail
+        address:</H2>
+        <div class="input">
+            <H4>Name:</H4><INPUT TYPE=text id="name" NAME=name placeholder="Name" required>
+            <div id="nameerror" class="error"></div>
+        </div>
+        <div class="input">
+            <H4>Telephone Number:</H4><INPUT TYPE=text id="telephone" NAME=PhoneNum placeholder="Telephone" required>
+            <div id="telerror" class="error"></div>    
+        </div>
+        <div class="input">
+            <H4 align=left>E-mail Address:</H4><INPUT id="email" TYPE=text NAME=EMail placeholder="email" required>
+            <div id="emailerror" class="error"></div>
+        </div>
+        <div class="input">
+            <H4>Select a video to rent and have delivered:
+            <SELECT id="list" NAME=lstVideos required onchange="getSelectValue()" >
+                <OPTION value=""> Please Select</OPTION>
+                <OPTION value="Psycho">Psycho</OPTION>
+                <OPTION value="Bambi">Bambi</OPTION>
+                <OPTION value="Ghost">Ghost</OPTION>
+                <OPTION value="Star Wars">Star Wars</OPTION>
+                <OPTION value="Dumbo">Dumbo</OPTION>
+                <OPTION value="Rain Man">Rain Man</OPTION>
+                <OPTION value="Ben Hur">Ben Hur</OPTION>
+                <OPTION value="Spartacus">Spartacus</OPTION>
+                <OPTION value="Tootsie">Tootsie</OPTION>
+                <OPTION value="The Sting">The Sting</OPTION>
+                <OPTION value="Blazing Saddles">Blazing Saddles</OPTION>
+            </SELECT></H4>
+        </div>
+        <div class="input">
+            <H4>The video you have selected is:</H4><INPUT TYPE=text NAME=txtVideo id="selectedVideo">
+        </div>
+        <div class="input">
+            <h4>The price of this video is:</h4><INPUT TYPE=text NAME=txtprice id="priceTag">
+        </div>
+        <div class="input">
+            <h4>The delivery fee and taxes are:</h4><INPUT id="tax" TYPE=text NAME=txtDeliveryFee>
+        </div>
+        <div class="input">
+            <H4>The total cost is:</H4><INPUT id="total" TYPE=text NAME=txtTotalCost>
+        </div>
+        <div class="inputBtn">
+            <H4>If you are satisfied with the results and want the video
+                delivered, click the Submit button. To start over, click the Reset button.</H4>
+            <INPUT TYPE=submit NAME=cmdSubmit VALUE="Submit Order" class="btn">
+            <INPUT NAME=cmdReset TYPE=reset VALUE="Clear Entries" class="btn">
+        </div>
+    </FORM>
+    </div>
+    <script defer src="index.js"></script>
+</body>
+</HTML>
+
+
+
