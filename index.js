@@ -51,7 +51,7 @@ form.addEventListener("submit", (e) => {
 
   if (email.value === "" || email.value === null) {
     emailmessages.push("Email Required");
-  } else if (!email.value.includes("@") || !email.value.includes(".com")) {
+  } else if (!email.value.includes("@") || !email.value.includes(".")) {
     emailmessages.push("Email not valid");
   } else {
     emailerrorElement.innerText = "";
